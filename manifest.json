@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Twenteye",
+  "version": "1.0",
+
+  "description": "A 20-20-20 method timer to rest your eyes while working on the computer.",
+
+  "icons": {
+    "48": "icons/eyes.png"
+  },
+
+  "permissions": ["activeTab"],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["twenteye.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/eyes.png",
+    "default_title": "Twenteye",
+    "default_popup": "popup/main.html"
+  }
+}
