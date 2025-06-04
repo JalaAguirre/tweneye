@@ -76,4 +76,5 @@ button[type="start"]:hover {
   transform: translateX(-50%);
   width: 60%;
   z-index: 10;
+  font-family: 'Silkscreen', sans-serif;
 }

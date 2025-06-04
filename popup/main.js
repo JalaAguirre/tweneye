@@ -19,6 +19,13 @@ function startTimer() {
   }, 1000);
 }
 
+function stopTimer() {
+  if (timerInterval !== null) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+}
+
 function updateTimerDisplay(seconds) {
   const min = Math.floor(seconds / 60);
   const sec = seconds % 60;
