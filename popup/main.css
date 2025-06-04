@@ -1,6 +1,9 @@
-html,
-body {
-  width: 100px;
+body{
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  scrollbar-width: none;
+  border: 2px solid red; 
 }
 
 .hidden {
@@ -10,10 +13,12 @@ body {
 button {
   border: none;
   width: 100%;
+  max-width: 90px;
+  height: 40px;
   margin: 3% auto;
   padding: 4px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 16px;
   cursor: pointer;
   background-color: #e5f2f2;
 }
@@ -22,10 +27,53 @@ button:hover {
   background-color: #cff2f2;
 }
 
-button[type="reset"] {
+button[type="start"] {
   background-color: #fbfbc9;
 }
 
-button[type="reset"]:hover {
+button[type="start"]:hover {
   background-color: #eaea9d;
+}
+
+#timer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+}
+
+#20min-content {
+  position: relative;
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+#timer-display {
+  position: relative;
+  border: 2px solid red;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 90%;
+  height: 90%;
+  min-height: 120px;
+  box-sizing: border-box;
+}
+
+#start-btn {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: 60%;
+  z-index: 10;
 }
